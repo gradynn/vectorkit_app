@@ -10,7 +10,7 @@ private:
 public:
 	// Constructors
 	Vector1D();
-	Vector1D(double);
+	explicit Vector1D(double);
 
 	// Accessors
 	double getLength() const;
