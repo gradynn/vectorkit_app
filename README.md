@@ -28,11 +28,14 @@ products.
 
 ### Vector1D
 
-#### Addition:
+#### Addition/Subtraction:
 
-`Vector1D add(Vector1D&) const`: Addition implemented as Vector1D class member function.
+The Vector1D class overloads the addition, subtraction, and unary minus operators to enable natural vector arithmetic. 
 
-    Vector1D v1(1.2); // v1.getLength() == 1.2
-    Vector1D v2(0.8); // v2.getLength() == 0.8
+    Vector1D v1(1.0), v2(0.5);
 
-    Vector1D v3 = v1.add(v2); // v3.getLength() == 2.0
+    Vector1D v3 = v1 + v2; // v3.getLength() == 1.5
+    Vector1D v4 = v1 - v2; // v4.
+    Vector1D v5 = v1 + (-v2); 
+
+

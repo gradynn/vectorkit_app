@@ -19,7 +19,9 @@ public:
 	void setLength(double);
 
 	// Vector Operations
-	Vector1D add(Vector1D&) const;
+	Vector1D operator+(Vector1D) const; // allows addition of two 1D vectors
+	Vector1D operator-(Vector1D) const; // allows ordered subtraction of two 1D vectors
+	Vector1D operator-() const; // inverts the vector it is applied to
 
 };
 

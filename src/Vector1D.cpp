@@ -18,6 +18,22 @@ void Vector1D::setLength(double x) {
 }
 
 // Vector Operations
-Vector1D Vector1D::add(Vector1D& in) const {
-	return Vector1D(length + in.getLength());
+Vector1D Vector1D::operator+(Vector1D b) const {
+	Vector1D out(length + b.getLength());
+	return out;
 }
+
+Vector1D Vector1D::operator-(Vector1D b) const {
+	Vector1D out(length - b.getLength());
+	return out;
+}
+
+Vector1D Vector1D::operator-() const {
+	Vector1D out(length * (-1));
+	return out;
+}
+
+
+
+
+
