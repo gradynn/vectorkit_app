@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "vectorkit.h"
 
 // Constructors
@@ -33,7 +31,11 @@ Vector1D Vector1D::operator-() const {
 	return out;
 }
 
+Vector1D Vector1D::operator*(double x) const {
+    Vector1D out(length * x);
+    return out;
+}
 
-
-
-
+double Vector1D::dot(Vector1D b) const {
+    return (length * b.getLength());
+}

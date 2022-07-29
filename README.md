@@ -34,8 +34,22 @@ The Vector1D class overloads the addition, subtraction, and unary minus operator
 
     Vector1D v1(1.0), v2(0.5);
 
-    Vector1D v3 = v1 + v2; // v3.getLength() == 1.5
-    Vector1D v4 = v1 - v2; // v4.
-    Vector1D v5 = v1 + (-v2); 
+    Vector1D v3 = v1 + v2; //v3.getLength() == 1.5
+    Vector1D v4 = v1 - v2; //v4.getLength() == 0.5
+    Vector1D v5 = v1 + (-v2); //v5.getLength() == 0.5
 
+#### Scalar Multiplication
 
+The Vector1D class overloads the multiplication operator to enable vector scaling.
+
+    Vector1D v1(2.0);
+
+    Vector v2 = v1 * 2.0; //v2.getLength() == 4.0
+
+#### Dot Product
+
+The scalar dot product of two vectors can be obtained with the `double dot(Vector1D)` member function.
+
+    Vector1D v1(2.0), v2(2.0);
+
+    double dotProduct = v1.dot(v2); //dotProduct == 4.0;

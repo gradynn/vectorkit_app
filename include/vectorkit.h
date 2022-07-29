@@ -8,21 +8,37 @@ private:
 	double length;
 
 public:
-	// Constructors
+	// constructors
 	Vector1D();
 	explicit Vector1D(double);
 
-	// Accessors
+	// accessors
 	double getLength() const;
 
-	// Mutators
+	// mutators
 	void setLength(double);
 
-	// Vector Operations
+	// vector Operations
 	Vector1D operator+(Vector1D) const; // allows addition of two 1D vectors
 	Vector1D operator-(Vector1D) const; // allows ordered subtraction of two 1D vectors
 	Vector1D operator-() const; // inverts the vector it is applied to
+    Vector1D operator*(double) const; // scales the vector it is applied too
+    double dot(Vector1D) const; // enables dot product operation
+};
 
+class Vector2D {
+private:
+    double components[2];
+
+public:
+    // constructors
+    Vector2D();
+    Vector2D(double, double);
+
+    // accessors
+    double getX();
+    double getY();
+    double getLength();
 };
 
 class VectorND {
